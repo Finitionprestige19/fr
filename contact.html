@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Finishion Prestige19</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#ECE6DC;
+    --ivory-2:#F4F0E8;
+    --ink:#2B2622;
+    --ink-soft:#5B5348;
+    --bronze:#9C7A3C;
+    --bronze-deep:#7A5D2C;
+    --line: rgba(43,38,34,0.16);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--ivory);
+    color:var(--ink);
+    font-family:'Public Sans', sans-serif;
+    line-height:1.6;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+  h1,.serif{font-family:'Fraunces', serif;}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:720px; margin:0 auto; padding:0 32px; width:100%;}
+
+  header{
+    border-bottom:1px solid var(--line);
+    padding:20px 0;
+  }
+  .header-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    max-width:720px; margin:0 auto; padding:0 32px;
+  }
+  .logo{font-size:20px; font-weight:600;}
+  .logo span{color:var(--bronze-deep);}
+  .back{ font-size:14px; color:var(--ink-soft); }
+  .back:hover{ color:var(--ink); }
+
+  main{ flex:1; display:flex; align-items:center; padding:80px 0; }
+
+  .eyebrow{ font-size:14px; color:var(--bronze-deep); margin-bottom:16px; }
+  h1{ font-size:38px; font-weight:500; line-height:1.15; max-width:14ch; }
+  .intro{ margin-top:18px; color:var(--ink-soft); font-size:16px; max-width:48ch; }
+
+  .details{ margin-top:48px; border-top:1px solid var(--line); }
+  .row{
+    display:flex; justify-content:space-between; align-items:baseline;
+    padding:22px 0; border-bottom:1px solid var(--line); gap:24px;
+  }
+  .row .label{ font-size:13px; color:var(--ink-soft); flex-shrink:0; }
+  .row .value{ font-size:17px; text-align:right; }
+  .row .value a{ color:var(--bronze-deep); }
+
+  footer{ padding:34px 0; border-top:1px solid var(--line); }
+  .footer-inner{ display:flex; justify-content:space-between; align-items:center; font-size:13px; color:var(--ink-soft); }
+
+  @media (max-width:600px){
+    .header-inner{ padding:0 20px; }
+    .wrap{ padding:0 20px; }
+    h1{ font-size:30px; }
+    .row{ flex-direction:column; align-items:flex-start; gap:6px; }
+    .row .value{ text-align:left; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">Finishion <span>Prestige19</span></div>
+    <a href="index.html" class="back">← Retour au site</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h1>Parlons de votre projet</h1>
+    <p class="intro">Appelez-nous, écrivez-nous ou passez directement au dépôt. Nous répondons sous 24h ouvrées.</p>
+
+    <div class="details">
+      <div class="row">
+        <span class="label">Téléphone</span>
+        <span class="value"><a href="tel:+33768499068">07 68 49 90 68</a></span>
+      </div>
+      <div class="row">
+        <span class="label">Adresse</span>
+        <span class="value">Rue François Labrousse<br>Brive-la-Gaillarde, France</span>
+      </div>
+      <div class="row">
+        <span class="label">E-mail</span>
+        <span class="value"><a href="mailto:finishionprestige19@gmx.com">finishionprestige19@gmx.com</a></span>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>© 2026 Finishion Prestige19</div>
+    <div>Grès cérame · Céramique · Mosaïque</div>
+  </div>
+</footer>
+
+</body>
+</html>

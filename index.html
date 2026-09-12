@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finishion Prestige19 — Carrelage et pierre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#ECE6DC;
+    --ivory-2:#F4F0E8;
+    --ink:#2B2622;
+    --ink-soft:#5B5348;
+    --bronze:#9C7A3C;
+    --bronze-deep:#7A5D2C;
+    --clay:#A85D3B;
+    --slate:#5C6670;
+    --line: rgba(43,38,34,0.16);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ivory);
+    color:var(--ink);
+    font-family:'Public Sans', sans-serif;
+    line-height:1.6;
+  }
+  h1,h2,h3,.serif{font-family:'Fraunces', serif;}
+  a{color:inherit; text-decoration:none;}
+  img{display:block; width:100%; height:100%; object-fit:cover;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 32px;}
+
+  /* Header */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(236,230,220,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:20px 32px; max-width:1120px; margin:0 auto;
+  }
+  .logo{font-size:20px; font-weight:600; letter-spacing:0.01em;}
+  .logo span{color:var(--bronze-deep);}
+  nav ul{display:flex; gap:36px; list-style:none;}
+  nav a{font-size:14px; color:var(--ink-soft); transition:color 0.2s;}
+  nav a:hover{color:var(--ink);}
+  .nav-cta{
+    border:1px solid var(--ink); padding:9px 18px; font-size:14px; border-radius:2px;
+  }
+
+  /* Hero */
+  .hero{
+    display:grid; grid-template-columns:1.1fr 0.9fr; align-items:stretch; min-height:640px;
+  }
+  .hero-text{
+    display:flex; flex-direction:column; justify-content:center;
+    padding:80px 60px 80px 32px;
+  }
+  .hero-text .eyebrow{
+    font-size:14px; color:var(--bronze-deep); margin-bottom:22px;
+  }
+  .hero-text h1{
+    font-size:56px; line-height:1.06; font-weight:500; letter-spacing:-0.01em;
+    max-width:11ch;
+  }
+  .hero-text p{
+    margin-top:26px; font-size:17px; color:var(--ink-soft); max-width:42ch;
+  }
+  .hero-actions{ display:flex; gap:16px; margin-top:38px; }
+  .btn-primary{
+    background:var(--ink); color:var(--ivory-2); padding:14px 26px; font-size:14px; border-radius:2px;
+  }
+  .btn-secondary{
+    border:1px solid var(--ink); padding:14px 26px; font-size:14px; border-radius:2px;
+  }
+  .hero-image{ position:relative; overflow:hidden; }
+  .hero-image img{ filter:saturate(0.95); }
+
+  /* Marquee strip - grout line divider */
+  .grout{
+    display:flex; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    background:var(--ivory-2);
+  }
+  .grout div{
+    flex:1; text-align:center; padding:18px 8px; font-size:13px; color:var(--ink-soft);
+    border-right:1px solid var(--line);
+  }
+  .grout div:last-child{ border-right:none; }
+
+  /* Section titles */
+  .section{ padding:100px 0; }
+  .section-head{ max-width:640px; margin-bottom:56px; }
+  .section-head .kicker{ font-size:14px; color:var(--bronze-deep); margin-bottom:14px; }
+  .section-head h2{ font-size:38px; font-weight:500; line-height:1.15; }
+  .section-head p{ margin-top:18px; color:var(--ink-soft); font-size:16px; max-width:56ch; }
+
+  /* Collections - tile grid, fits the subject */
+  .tile-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); border:1px solid var(--line);
+  }
+  .tile{
+    border-right:1px solid var(--line); border-bottom:1px solid var(--line);
+    padding:36px 26px; min-height:230px; display:flex; flex-direction:column; justify-content:space-between;
+  }
+  .tile:nth-child(3n){ border-right:none; }
+  .tile .num{ font-size:13px; color:var(--ink-soft); }
+  .tile h3{ font-size:21px; font-weight:500; margin-top:60px; }
+  .tile p{ font-size:14px; color:var(--ink-soft); margin-top:10px; }
+
+  /* Gallery - two asymmetric images */
+  .gallery{
+    display:grid; grid-template-columns:1.3fr 1fr; gap:2px; margin-top:100px;
+  }
+  .gallery figure{ position:relative; overflow:hidden; height:460px; }
+  .gallery figcaption{
+    position:absolute; left:0; bottom:0; right:0; padding:22px 26px;
+    background:linear-gradient(to top, rgba(43,38,34,0.65), transparent);
+    color:var(--ivory-2); font-size:14px;
+  }
+
+  /* Process */
+  .process{ background:var(--ink); color:var(--ivory-2); }
+  .process .section-head h2{ color:var(--ivory-2); }
+  .process .section-head p{ color:rgba(236,230,220,0.7); }
+  .process .section-head .kicker{ color:#C79B5E; }
+  .steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:0; border-top:1px solid rgba(236,230,220,0.2); }
+  .step{
+    padding:40px 30px 40px 0; border-right:1px solid rgba(236,230,220,0.2);
+  }
+  .step:last-child{ border-right:none; }
+  .step .step-mark{ font-family:'Fraunces', serif; font-size:15px; color:#C79B5E; }
+  .step h3{ font-size:20px; font-weight:500; margin-top:22px; }
+  .step p{ font-size:14px; color:rgba(236,230,220,0.65); margin-top:12px; max-width:32ch; }
+
+  /* Quote */
+  .quote{ padding:110px 0; text-align:center; }
+  .quote blockquote{
+    font-family:'Fraunces', serif; font-size:30px; font-weight:400; line-height:1.4;
+    max-width:760px; margin:0 auto; color:var(--ink);
+  }
+  .quote cite{ display:block; margin-top:26px; font-size:14px; color:var(--ink-soft); font-style:normal; }
+
+  /* Contact */
+  .contact{ background:var(--ivory-2); border-top:1px solid var(--line); }
+  .contact-inner{
+    display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:start;
+  }
+  .contact-inner-single{ grid-template-columns:1fr; max-width:520px; }
+  .contact h2{ font-size:34px; font-weight:500; max-width:11ch; }
+  .contact p{ margin-top:18px; color:var(--ink-soft); max-width:40ch; }
+  .contact-detail{ margin-top:34px; font-size:14px; }
+  .contact-detail div{ padding:12px 0; border-top:1px solid var(--line); display:flex; justify-content:space-between; }
+  form{ display:flex; flex-direction:column; gap:18px; }
+  label{ font-size:13px; color:var(--ink-soft); margin-bottom:6px; display:block; }
+  input, textarea{
+    width:100%; background:transparent; border:none; border-bottom:1px solid var(--line);
+    padding:10px 0; font-family:'Public Sans', sans-serif; font-size:15px; color:var(--ink);
+  }
+  input:focus, textarea:focus{ outline:none; border-color:var(--ink); }
+  textarea{ resize:vertical; min-height:90px; }
+  .submit{
+    margin-top:10px; align-self:flex-start; background:var(--ink); color:var(--ivory-2);
+    padding:14px 30px; font-size:14px; border:none; border-radius:2px; cursor:pointer;
+    font-family:'Public Sans', sans-serif;
+  }
+
+  footer{ padding:34px 0; border-top:1px solid var(--line); }
+  .footer-inner{ display:flex; justify-content:space-between; align-items:center; font-size:13px; color:var(--ink-soft); }
+
+  @media (max-width:860px){
+    .hero{ grid-template-columns:1fr; }
+    .hero-image{ height:340px; order:-1; }
+    .hero-text{ padding:56px 24px; }
+    .hero-text h1{ font-size:38px; max-width:none; }
+    nav ul{ display:none; }
+    .grout{ flex-wrap:wrap; }
+    .grout div{ flex:1 1 50%; border-bottom:1px solid var(--line); }
+    .tile-grid{ grid-template-columns:1fr 1fr; }
+    .tile:nth-child(2n){ border-right:none; }
+    .tile:nth-child(3n){ border-right:1px solid var(--line); }
+    .gallery{ grid-template-columns:1fr; }
+    .steps{ grid-template-columns:1fr; }
+    .step{ border-right:none; border-bottom:1px solid rgba(236,230,220,0.2); }
+    .contact-inner{ grid-template-columns:1fr; gap:40px; }
+    .quote blockquote{ font-size:22px; }
+    .wrap{ padding:0 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">Finishion <span>Prestige19</span></div>
+    <nav>
+      <ul>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#gallery">Réalisations</a></li>
+        <li><a href="#process">Étapes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="contact.html" class="nav-cta">Prendre rendez-vous</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <div class="eyebrow">Carrelage et pierre naturelle, depuis la première coupe</div>
+    <h1>Des sols taillés pour durer plus longtemps que la pièce elle-même</h1>
+    <p>Finishion Prestige19 pose du grès cérame, de la céramique et de la mosaïque pour les maisons et les ateliers qui ne veulent pas refaire leur sol deux fois. Basée à Brive-la-Gaillarde, en France.</p>
+    <div class="hero-actions">
+      <a href="#collections" class="btn-primary">Voir les collections</a>
+      <a href="contact.html" class="btn-secondary">Prendre rendez-vous</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1706629503571-c165023a7792?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Sol carrelé dans un intérieur lumineux">
+  </div>
+</section>
+
+<div class="grout">
+  <div>Grès cérame</div>
+  <div>Céramique</div>
+  <div>Mosaïque et finitions</div>
+</div>
+
+<section class="section" id="collections">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Collections</div>
+      <h2>Quatre gammes de matériaux, une seule exigence de finition</h2>
+      <p>Chaque dalle et chaque carreau est contrôlé sur place avant d'arriver sur un chantier. Ce qui ne passe pas le contrôle ne part pas.</p>
+    </div>
+    <div class="tile-grid">
+      <div class="tile">
+        <div class="num">01</div>
+        <div>
+          <h3>Grès cérame réserve</h3>
+          <p>Grand format pensé pour les zones à fort passage.</p>
+        </div>
+      </div>
+      <div class="tile">
+        <div class="num">02</div>
+        <div>
+          <h3>Céramique atelier</h3>
+          <p>Céramique émaillée pour cuisines, salles de bain et crédences.</p>
+        </div>
+      </div>
+      <div class="tile">
+        <div class="num">03</div>
+        <div>
+          <h3>Mosaïque éditions</h3>
+          <p>Mosaïque posée à la main et finitions pour les détails et bordures.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery" id="gallery">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1706629503586-2731f65587ae?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Sol carrelé posé dans un salon">
+        <figcaption>Chantier à Dublin — pose de grès cérame effet pierre</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1534503442463-e0ddba45cf4c?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Gros plan sur des carreaux de pierre grise">
+        <figcaption>Détail — pierre grise adoucie, joint fin</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Le déroulement d'un projet</div>
+      <h2>De la visite à la pose finale</h2>
+      <p>Trois étapes, aucune surprise entre les deux.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-mark">I.</div>
+        <h3>Visite et prise de mesures</h3>
+        <p>Nous visitons l'espace et prenons les mesures nécessaires au projet.</p>
+      </div>
+      <div class="step">
+        <div class="step-mark">II.</div>
+        <h3>Livraison du matériel</h3>
+        <p>Le matériel nécessaire à la pose est livré sur site, hors carrelage.</p>
+      </div>
+      <div class="step">
+        <div class="step-mark">III.</div>
+        <h3>Pose définitive</h3>
+        <p>Pose définitive et vérification de chaque détail avant la remise du chantier.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="wrap">
+    <blockquote>« Le sol est la seule chose à laquelle nous n'avons plus jamais eu à penser après la pose. »</blockquote>
+    <cite>— un client Finishion Prestige19</cite>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap section">
+    <div class="contact-inner contact-inner-single">
+      <div>
+        <h2>Prenez rendez-vous</h2>
+        <p>Appelez-nous, écrivez-nous ou passez au dépôt pour discuter de votre projet.</p>
+        <a href="contact.html" class="btn-primary" style="display:inline-block; margin-top:30px;">Voir nos coordonnées</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>© 2026 Finishion Prestige19</div>
+    <div>Grès cérame · Céramique · Mosaïque</div>
+  </div>
+</footer>
+
+</body>
+</html>
